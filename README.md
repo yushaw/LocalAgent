@@ -10,7 +10,8 @@
 
 # 待完成
 1. 实现 prompt 的 ToT (Tree of Thoughts)，用以处理复杂的数据或逻辑推理问题；
-2. 自动生成 prompt。目前，根据任务调整 prompt 的工作量很大。
+2. 自动生成 prompt。目前，根据任务调整 prompt 的工作量很大;
+3. 由于请求数多，embedchain 经常会出现 OpenAI 请求超时的问题，需要本地实现进行调整；
 
 # 代码实现
 1. 基于 OpenAI 和 Langchain，使用了 Chromadb 的本地数据库;
