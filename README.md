@@ -4,14 +4,16 @@
 
 # 原理
 1. 采用了典型的 Tasken Driven 的 Agent 结构；
-2. 考虑到 embedding 数据库功能单一，我们确保任务精细化，以便语言模型可以从数据库中找到对应的数据或信息；
-3. 需要对 prompt 进行大量修改和调整。例如，如果在 embedding 数据库中未找到内容，可能是因为任务划分不够细致，需进行再次处理（本库未体现）；
-4. Prompt 采用标准的 ReAct 形式。
+2. 使用了 OpenAI 的 function call API，以及 Langchain 的语言模型；
+3. 考虑到 embedding 数据库功能单一，我们确保任务精细化，以便语言模型可以从数据库中找到对应的数据或信息；
+4. 需要对 prompt 进行大量修改和调整。例如，如果在 embedding 数据库中未找到内容，可能是因为任务划分不够细致，需进行再次处理（本库未体现）；
+5. Prompt 采用标准的 ReAct 形式。
 
 # 待完成
 1. 实现 prompt 的 ToT (Tree of Thoughts)，用以处理复杂的数据或逻辑推理问题；
 2. 自动生成 prompt。目前，根据任务调整 prompt 的工作量很大;
 3. 由于请求数多，embedchain 经常会出现 OpenAI 请求超时的问题，需要本地实现进行调整；
+4. 添加更多的工具；修改 wikipedia 的 tool；
 
 # 代码实现
 1. 基于 OpenAI 和 Langchain，使用了 Chromadb 的本地数据库;
