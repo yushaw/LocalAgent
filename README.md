@@ -14,7 +14,7 @@
 
 # 代码实现
 1. 基于 OpenAI 和 Langchain，使用了 Chromadb 的本地数据库;
-2. 为了快速实现功能，我们借用了大量来自 aurelio-labs/funkagent 和 embedchain/embedchain 的代码。
+2. 为了快速实现功能，借用了大量来自 aurelio-labs/funkagent 和 embedchain/embedchain 的代码。
 
 
 
